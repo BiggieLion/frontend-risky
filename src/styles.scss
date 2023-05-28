@@ -1,1 +1,468 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "variables";
+
+
+html, body {
+  background: $body-background;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+// Scrollbar
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.x-scroll {
+  overflow-x: auto;
+}
+
+// y-scrollbar
+.hide-scrollbar-y::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar-y {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.y-scroll {
+  overflow-y: auto;
+}
+
+ // Scroll Images on Create Client
+.hide-scrollbar-x::-webkit-scrollbar {
+  height: 10px;
+}
+
+.hide-scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.x-scrollbar {
+  overflow-x: scroll;
+}
+
+// Scroll on Kpis Component
+.y-hide-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.y-hide-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.y-scrollbar {
+  overflow-y: scroll;
+}
+
+
+// Image's Styles
+
+.img-box {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+// Responsive Styles
+
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
+}
+
+// Flex's Styles
+
+.flex {
+  display: flex;
+}
+
+.stretch {
+  flex: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex.align-end {
+  align-items: flex-end;
+}
+
+.flex.center {
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+.flex.around {
+  justify-content: space-around;
+}
+
+.flex.evenly {
+  justify-content: space-evenly;
+}
+
+.flex.end {
+  justify-content: flex-end;
+}
+
+.flex.start {
+  justify-content: flex-start;
+}
+// Wrapper's Styles
+
+.wrapper-box {
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 100%;
+    max-width: $max-width;
+  }
+}
+
+// Page's Styles
+
+.page-container {
+  padding: 0 40px 25px 40px;
+  min-height: 100vh;
+}
+
+.page-header {
+  padding-bottom: 5px; //10px;
+  position: sticky;
+  top: 0;
+  background: $body-background;
+  z-index: 5;
+  padding-top: 5px;
+}
+
+@media all and (max-width: $desktop-width) {
+  .page-container {
+    padding: 0 30px 20px 30px;
+  }
+
+  .page-header {
+    padding-top: 5px;
+  }
+}
+
+@media all and (max-width: $tablet-width) {
+  .page-container {
+    padding: 0 20px 20px 20px;
+  }
+
+  .page-header {
+    padding-top: 5px;
+    position: relative;
+  }
+}
+
+@media all and (max-width: $mobile-width) {
+  .page-container {
+    padding: 0 15px 10px 15px;
+  }
+
+  .page-header {
+    padding-top: 5px;
+    position: relative;
+  }
+}
+
+// Button's Styles
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background: linear-gradient(270deg, #4f7b16, #264b13) !important;
+}
+
+// Title's Styles
+
+.page-title {
+  font-size: 28px;
+  color: $font-titles;
+  margin-bottom: 5px;//15px;
+  font-weight: 700;
+  align-items: center;
+
+  button {
+    margin: 5px 0;
+  }
+}
+
+@media all and (max-width: $mobile-width) {
+  .page-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+}
+
+.ant-spin-blur::after {
+  opacity: .1 !important;
+}
+
+// Sider Styles
+
+.ant-menu-item-selected {
+  background: $primary-color linear-gradient(270deg, #6DAB1E, #417F20);
+  color: #FFFFFF !important;
+}
+
+.ant-menu-item-selected:hover, .ant-menu-item-selected:focus {
+  color: #FFFFFF !important;
+}
+
+.ant-menu-sub-item-selected {
+  background: transparent !important;
+
+  i, span {
+    color: $green-color !important;
+  }
+}
+
+// Select's Styles
+
+nz-select {
+  nz-select-search {
+    flex-grow: 1;
+  }
+}
+
+nz-input-group {
+  input {
+    background: transparent !important;
+  }
+}
+
+
+.simple-card {
+  padding: 20px 25px;
+  background: $second-bg;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 100%;
+
+  .card-title {
+    color: $font-titles;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.hide-card {
+  padding: 20px 25px;
+  background: $second-bg;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: auto;
+}
+
+.ant-layout-sider-zero-width-trigger {
+  position: fixed !important;
+  left: 0;
+  top: 10px !important;
+  z-index: 6;
+}
+
+// Drawer's Styles
+
+.ant-drawer-header {
+  border-bottom: 1px solid $border-bottom-rows !important;
+}
+
+.ant-drawer-content-wrapper {
+  max-width: 100vw !important;
+}
+
+.drawer-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.drawer-footer {
+  margin-top: 20px;
+}
+
+.details-title {
+  display: inline-flex;
+  align-items: center;
+  max-width: 95%;
+
+  .status {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+}
+
+//Images Preview Styles
+
+.ant-image-preview-switch-right, .ant-image-preview-switch-left {
+  background: #7389a0;
+  color: white;
+}
+
+// Icons' styles
+
+.icon-green {
+  i {
+    color: $green-color;
+    font-size: 17px;
+  }
+}
+
+.icon-red {
+  i {
+    color: $red-color;
+    font-size: 17px;
+  }
+}
+
+
+.table-filters-box {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-basis: 200px;
+  margin: 0 -10px;
+
+  .client-select, .search-box, .export-csv {
+    padding: 0 10px;
+  }
+
+  .client-select {
+    flex-basis: fit-content;
+    min-width: 200px;
+
+    nz-select {
+      min-width: 100%;
+      width: fit-content;
+    }
+  }
+}
+
+.hide-dropdown {
+  display: none !important;
+}
+
+.total-card {
+  background: $second-bg;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 5px;
+  min-height: 100%;
+  flex-wrap: nowrap;
+  border: solid 2px transparent;
+  cursor: pointer;
+  transition: all 350ms;
+  min-width: 100%;
+  display: flex;
+
+  .data {
+    flex: 1;
+
+    .total {
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    .name {
+      font-size: 14px;
+      font-weight: 400;
+      color: #748AA1;
+      white-space: pre-line;
+    }
+  }
+
+  .image {
+    width: 50px;
+    margin-left: 10px;
+  }
+}
+
+.total-card:hover, .total-card:focus {
+  border: solid 2px #6DAB1E;
+}
+
+
+img.ant-image-preview-img {
+  background: #17191c !important;
+}
+
+.cdk-drag.ant-image-preview-img-wrapper {
+  padding: 70px !important;
+}
+
+.ant-drawer-title {
+  .ng-star-inserted {
+    width: 95%;
+    overflow-x: auto;
+  }
+}
+
+.br-in-text{
+  white-space:pre-wrap;
+}
+
+// Responsive nz-range-picker
+@media(max-width: 576px) {
+    .ant-picker-panels {
+      flex-direction: column;
+    }
+  }
+
+  @media (display-mode: minimal-ui) {
+
+  }

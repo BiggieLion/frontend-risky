@@ -1,0 +1,18 @@
+// A relative path works
+@import 'src/mixin';
+// But now this works as well
+@import 'mixin';
+
+
+.themeMixin(@rules) {
+    html {
+      &.theme {
+        @import './theme.less';
+        @rules();
+      }
+      &.theme-light {
+        @import './theme-light.less';
+        @rules();
+      }
+    }
+  }
