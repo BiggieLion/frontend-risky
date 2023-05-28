@@ -1,1 +1,13 @@
-<p>auth works!</p>
+<div class="auth flex column">
+  <div class="auth-content stretch">
+    <div [@animRoutes]="animationState">
+      <router-outlet (activate)="onActivate()"></router-outlet>
+    </div>
+  </div>
+
+  <div class="auth-footer">
+    <div class="img-box">
+      <img src="../../../assets/images/logo-icon.png" alt="Logo icono">
+    </div>
+  </div>
+</div>

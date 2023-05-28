@@ -1,4 +1,19 @@
-<!-- NG-ZORRO -->
-<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</a>
+<div [@shellRoutes]="animationState">
+  <router-outlet (activate)="onActivate()"></router-outlet>
+</div>
+
+<ng-template #templateNotification let-notification>
+  <div class="ant-notification-notice-content background">
+    <div class="ant-notification-notice-icon">
+      <span class="ant-notification-notice-icon">
+        <i
+          nz-icon
+          nzType="info-circle"
+          nzTheme="outline"
+          style="color: #FFFFFF;"></i>
+      </span>
+      <div class="ant-notification-notice-message">prueba</div>
+      <div class="ant-notification-notice-description">prueba</div>
+    </div>
+  </div>
+</ng-template>
