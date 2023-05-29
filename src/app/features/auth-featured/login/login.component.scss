@@ -1,0 +1,59 @@
+@import "../../../../variables.scss";
+
+.recaptcha {
+  margin-bottom: 10px;
+}
+
+.login {
+  margin: 10px 5%;
+}
+
+.login-survey {
+  position: relative;
+  bottom: -15px;
+  font-size: 16px;
+}
+
+.login-title {
+  line-height: 52px;
+  font-size: 46px;
+  color: $font-titles;
+  font-weight: 700;
+  width: 735px;
+  max-width: 100%;
+}
+
+.login-box {
+  max-width: 100%;
+  width: 450px;
+  margin-top: 35px;
+}
+
+.box-title {
+  color: $primary-color;
+  font-weight: 600;
+  font-size: 41px;
+}
+
+.box-subtitle {
+  color: $font-titles;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.button-row {
+  padding-top: 10px;
+}
+
+.forgot-row {
+  text-align: right;
+  margin-top: 15px;
+}
+
+@media all and (max-width: $mobile-width) {
+  .login-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
